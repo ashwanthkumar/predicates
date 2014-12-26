@@ -6,7 +6,7 @@ object Build extends Build {
   val AppVersion = "0.0.2-SNAPSHOT"
   val ScalaVersion = "2.11.1"
 
-  lazy val main = Project("predicates", file("."))
+  lazy val main = Project("predicates", file("."), settings = defaultSettings)
     .settings(organization := "in.ashwanthkumar",
       version := AppVersion,
       libraryDependencies += (
@@ -16,7 +16,7 @@ object Build extends Build {
       crossScalaVersions := Seq("2.11.1", "2.10.4", "2.9.1", "2.9.2", "2.9.3")
   )
 
-  override val settings = super.settings ++ Seq(
+  lazy val defaultSettings = super.settings ++ Seq(
     fork in run := false,
     parallelExecution in This := true,
     publishMavenStyle := true,
