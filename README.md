@@ -1,3 +1,5 @@
+[![Build Status](https://snap-ci.com/ashwanthkumar/predicates/branch/master/build_image)](https://snap-ci.com/ashwanthkumar/predicates/branch/master)
+
 # predicates
 Wouldn't it be so nice if we can do something like `(validUserName and validPassword and validCaptcha) thenDo Success` where `validUserName`, `validPassword` and `validCaptcha` are functions of type `T => Boolean`. `predicates` helps you do exactly that. It provides simple wrapper methods to pimp your `T => Boolean` functions with `and`, `or` and `not` so that we can write expressive code. 
 
