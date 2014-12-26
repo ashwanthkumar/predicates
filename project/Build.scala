@@ -22,8 +22,7 @@ object Build extends Build {
     publishMavenStyle := true,
     crossPaths := true,
     publishArtifact in Test := false,
-    publishArtifact in(Compile, packageDoc) := false,
-    // publishing the main sources jar
+    publishArtifact in(Compile, packageDoc) := true,
     publishArtifact in(Compile, packageSrc) := true,
     credentials += Credentials(Path.userHome / ".ivy2" / ".credentials"),
     publishTo <<= version { (v: String) =>
